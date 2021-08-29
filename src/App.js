@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
 
 function App() {
+  // can use variables inside components
+  // const name = 'Matthew'
+  // const x = false
+      // <h2>hello {name}</h2>
+      // <h3>Hello {x ? 'Yes' : 'No'}</h3>
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header  />
     </div>
   );
 }
