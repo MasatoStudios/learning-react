@@ -1,4 +1,5 @@
 import Header from './components/Header'
+// imports the header 
 
 function App() {
   // can use variables inside components
