@@ -6,15 +6,16 @@ import Button from './Button'
 // later on
 
 // Header arrow function with a title parameter which is access through title='task tracker' in App.js file
-const Header = ({ title }) => {
+const Header = ({ title, onAdd, showAdd }) => {
+    // const onClick =() =>{
+    //     console.log('click');
+    // }
     return (
         // has to have a parent container eg div header etc
         // can an empty tag <> </> called a fragment, but when rendered it wont have a container which is not normally favoured
         <header className='header'>
             <h1> {title}</h1>
-            <Button color='green' text='Hello' />
-            <Button color='blue' text='Hello' />
-            <Button color='red' text='Hello' />
+            <Button color={showAdd ? 'red' : 'green'} text={showAdd ? 'close' : 'Add'} onClick={onAdd} />
         </header>
     )
 }

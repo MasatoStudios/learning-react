@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // Using props but destructured them by naming the specifics such as color and text
-const Button = ({color, text}) => {
+const Button = ({color, text, onClick}) => {
 
     // Basic function for on click event
     // const onClick = (e) => {
@@ -11,7 +11,13 @@ const Button = ({color, text}) => {
 
     return( 
         // to use the color, we use an inline style and add the argument as the prop 'color'
-    <button style={{backgroundColor: color}} className='btn'>{text}</button>
+    <button
+        onClick={onClick}
+        style={{backgroundColor: color}}
+        className='btn'
+        >
+            {text}
+    </button>
     )
 }
 
@@ -24,6 +30,7 @@ Button.defaultProps = {
 Button.propTypes = {
     text: PropTypes.string,
     color: PropTypes.string,
+    onClick: PropTypes.func,
 }
 
 // exports the Button 
